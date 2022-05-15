@@ -166,3 +166,54 @@ body {
 #inp4:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp4"] > .control {
   background-color: transparent;
 }
+
+@media (max-width: 500px) {
+
+  .slider-container {
+    width: 100%;
+    max-width: 20rem;
+    row-gap: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.7rem rgb(55, 52, 52), -0.1rem -0.1rem 0.7rem rgb(55, 52, 52);
+}
+
+.img-slider {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+}
+
+.img-container {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+.bottom-container {
+flex-direction: column-reverse;
+row-gap: 1rem;
+}
+
+.controls-container {
+  align-self: center;
+}
+
+.text-container {
+width: 15rem;
+}
+
+.message {
+width: 15rem;
+font-size: 0.8rem;
+}
+
+.label-control {
+padding: 0.2rem;
+}
+
+.control {
+width: 0.5rem;
+height: 0.5rem;
+border: 0.05rem solid rgb(108, 108, 110);
+border-radius: 0.5rem;
+}
+}
