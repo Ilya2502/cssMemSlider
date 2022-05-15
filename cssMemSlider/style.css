@@ -18,6 +18,7 @@ body {
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 100%;
       max-width: 80rem;
       margin: 0 auto;
       padding: 2rem;
@@ -25,36 +26,45 @@ body {
       background-color: brown;
   }
 
+  .radio {
+    display: none;
+  }
+
   .slider-container {
       display: flex;
       flex-direction: column;
       width: 100%;
+      max-width: 40.625rem;
+      row-gap: 2rem;
   }
 
   .img-slider {
-      width: 40.625rem;
+      width: 100%;
+      max-width: 40.625rem;
       height: 30.4375rem;
       transition: 0.5s;
       display: flex;
       flex-wrap: nowrap;
       overflow: hidden;
-      
+      box-shadow: 3px 3px 10px red, -3px -3px 10px red;
   }
 
   .img-container {
-    width: 40.625rem;
+    width: 100%;
+    max-width: 40.625rem;
     height: 30.4375rem;
     transition: 0.5s;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
   }
 
   .img1, .img2, .img3, .img4 {
-      /* width: 100%;
-      height: auto; */
+    width: 100%;
+    height: auto;
   }
 
-  #inp1:checked ~ .slider-container > .img-slider > .img-container {
+#inp1:checked ~ .slider-container > .img-slider > .img-container {
     transform: translateX(0);
 }
 
@@ -68,4 +78,84 @@ body {
 
 #inp4:checked ~ .slider-container > .img-slider >  .img-container {
     transform: translateX(-300%);
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.text-container {
+  display: flex;
+  width: 20rem;
+  overflow: hidden;
+}
+
+.message-container {
+  transition: 0.5s;
+}
+
+.message {
+  width: 20rem;;
+}
+
+#inp1:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(0);
+}
+
+#inp2:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-100%);
+}
+
+#inp3:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-200%);
+}
+
+#inp4:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-300%);
+}
+
+.controls-container {
+  display: flex;
+}
+
+.label-control {
+  padding: 5px;
+}
+
+.label-control:hover {
+  cursor: pointer;
+}
+
+.control {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid blue;
+  border-radius: 15px;
+  background-color: blue;
+  transition: 0.5s;
+}
+
+.label-control:hover .control {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+
+
+#inp1:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp1"] > .control {
+  background-color: transparent;
+}
+
+#inp2:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp2"] > .control {
+  background-color: transparent;
+}
+
+#inp3:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp3"] > .control {
+  background-color: transparent;
+}
+
+#inp4:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp4"] > .control {
+  background-color: transparent;
 }
