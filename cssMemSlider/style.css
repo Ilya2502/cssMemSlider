@@ -17,13 +17,14 @@ body {
   .container {
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
       width: 100%;
       max-width: 80rem;
       margin: 0 auto;
       padding: 2rem;
       height: 100vh;
-      background-color: brown;
+      background-color: rgb(158, 156, 156);
   }
 
   .radio {
@@ -36,6 +37,8 @@ body {
       width: 100%;
       max-width: 40.625rem;
       row-gap: 2rem;
+      box-shadow: 0.2rem 0.2rem 1.25rem rgb(55, 52, 52), -0.2rem -0.2rem 1.25rem rgb(55, 52, 52);
+      background-color: black;
   }
 
   .img-slider {
@@ -46,7 +49,6 @@ body {
       display: flex;
       flex-wrap: nowrap;
       overflow: hidden;
-      box-shadow: 3px 3px 10px red, -3px -3px 10px red;
   }
 
   .img-container {
@@ -57,6 +59,7 @@ body {
     display: flex;
     align-items: center;
     flex-shrink: 0;
+    padding-right: 0.1rem;
   }
 
   .img1, .img2, .img3, .img4 {
@@ -84,11 +87,13 @@ body {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  padding: 0 1rem 1rem;
+  row-gap: 2rem;
 }
 
 .text-container {
   display: flex;
-  width: 20rem;
+  width: 25rem;
   overflow: hidden;
 }
 
@@ -97,7 +102,9 @@ body {
 }
 
 .message {
-  width: 20rem;;
+  width: 25rem;
+  font-size: 1.5rem;
+  color: #ffffff;
 }
 
 #inp1:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
@@ -121,7 +128,7 @@ body {
 }
 
 .label-control {
-  padding: 5px;
+  padding: 0.3rem;
 }
 
 .label-control:hover {
@@ -130,11 +137,11 @@ body {
 
 .control {
   display: inline-block;
-  width: 15px;
-  height: 15px;
-  border: 2px solid blue;
-  border-radius: 15px;
-  background-color: blue;
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid rgb(108, 108, 110);
+  border-radius: 1rem;
+  background-color: rgb(108, 108, 110);
   transition: 0.5s;
 }
 
