@@ -142,7 +142,7 @@ body {
   border: 0.1rem solid rgb(108, 108, 110);
   border-radius: 1rem;
   background-color: rgb(108, 108, 110);
-  transition: 0.5s;
+  transition: box-shadow 0.1s, background-color 0.5s, border-color 0.5s;
 }
 
 .label-control:hover .control {
@@ -150,6 +150,9 @@ body {
   background-color: #ffffff;
 }
 
+.label-control:active .control {
+  box-shadow: 0.08rem 0.08rem 0.5rem rgb(255, 255, 255), -0.08rem -0.08rem 0.5rem rgb(255, 255, 255);
+}
 
 #inp1:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp1"] > .control {
   background-color: transparent;
@@ -166,6 +169,7 @@ body {
 #inp4:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp4"] > .control {
   background-color: transparent;
 }
+
 
 @media (max-width: 500px) {
 
