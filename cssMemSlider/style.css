@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+html {
+  scroll-behavior: smooth;
+  }
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+  .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      max-width: 80rem;
+      margin: 0 auto;
+      padding: 2rem;
+      height: 100vh;
+      background-color: rgb(158, 156, 156);
+  }
+
+  .radio {
+    display: none;
+  }
+
+  .slider-container {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 40.625rem;
+      row-gap: 2rem;
+      box-shadow: 0.2rem 0.2rem 1.25rem rgb(55, 52, 52), -0.2rem -0.2rem 1.25rem rgb(55, 52, 52);
+      background-color: black;
+  }
+
+  .img-slider {
+      width: 100%;
+      max-width: 40.625rem;
+      height: 30.4375rem;
+      transition: 0.5s;
+      display: flex;
+      flex-wrap: nowrap;
+      overflow: hidden;
+  }
+
+  .img-container {
+    width: 100%;
+    max-width: 40.625rem;
+    height: 30.4375rem;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    padding-right: 0.1rem;
+  }
+
+  .img1, .img2, .img3, .img4 {
+    width: 100%;
+    height: auto;
+  }
+
+#inp1:checked ~ .slider-container > .img-slider > .img-container {
+    transform: translateX(0);
+}
+
+#inp2:checked ~ .slider-container > .img-slider >  .img-container {
+    transform: translateX(-100%);
+}
+
+#inp3:checked ~ .slider-container > .img-slider >  .img-container {
+    transform: translateX(-200%);
+}
+
+#inp4:checked ~ .slider-container > .img-slider >  .img-container {
+    transform: translateX(-300%);
+}
+
+.bottom-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 1rem 1rem;
+  row-gap: 2rem;
+}
+
+.text-container {
+  display: flex;
+  width: 25rem;
+  overflow: hidden;
+}
+
+.message-container {
+  transition: 0.5s;
+}
+
+.message {
+  width: 25rem;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+#inp1:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(0);
+}
+
+#inp2:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-100%);
+}
+
+#inp3:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-200%);
+}
+
+#inp4:checked ~ .slider-container > .bottom-container > .text-container > .message-container {
+  transform: translateX(-300%);
+}
+
+.controls-container {
+  display: flex;
+}
+
+.label-control {
+  padding: 0.3rem;
+}
+
+.label-control:hover {
+  cursor: pointer;
+}
+
+.control {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 0.1rem solid rgb(108, 108, 110);
+  border-radius: 1rem;
+  background-color: rgb(108, 108, 110);
+  transition: box-shadow 0.1s, background-color 0.5s, border-color 0.5s;
+}
+
+.label-control:hover .control {
+  border-color: #ffffff;
+  background-color: #ffffff;
+}
+
+.label-control:active .control {
+  box-shadow: 0.08rem 0.08rem 0.5rem rgb(255, 255, 255), -0.08rem -0.08rem 0.5rem rgb(255, 255, 255);
+}
+
+#inp1:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp1"] > .control {
+  background-color: transparent;
+}
+
+#inp2:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp2"] > .control {
+  background-color: transparent;
+}
+
+#inp3:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp3"] > .control {
+  background-color: transparent;
+}
+
+#inp4:checked ~ .slider-container > .bottom-container > .controls-container > label[for="inp4"] > .control {
+  background-color: transparent;
+}
+
+
+@media (max-width: 500px) {
+
+  .slider-container {
+    width: 100%;
+    max-width: 20rem;
+    row-gap: 1rem;
+    box-shadow: 0.1rem 0.1rem 0.7rem rgb(55, 52, 52), -0.1rem -0.1rem 0.7rem rgb(55, 52, 52);
+}
+
+.img-slider {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+}
+
+.img-container {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+.bottom-container {
+flex-direction: column-reverse;
+row-gap: 1rem;
+}
+
+.controls-container {
+  align-self: center;
+}
+
+.text-container {
+width: 15rem;
+}
+
+.message {
+width: 15rem;
+font-size: 0.8rem;
+}
+
+.label-control {
+padding: 0.2rem;
+}
+
+.control {
+width: 0.5rem;
+height: 0.5rem;
+border: 0.05rem solid rgb(108, 108, 110);
+border-radius: 0.5rem;
+}
+}
